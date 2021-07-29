@@ -1,0 +1,33 @@
+# This file created by ruzhu chen to build conda package from prebuilt wheel file
+# for Power9 running Python 3.7
+# ------------------------------------------------
+package:
+    name: pyarrow
+    version: 0.15.1
+build:
+    number: '1'
+    string: py37ppc64le_gpu
+requirements:
+    build:
+      - python 3.7
+      - numpy
+      - pip
+    run: 
+      - python
+      - numpy
+      - six
+      - libutf8proc
+      - libprotobuf=3.11.4
+      - bzip2
+      - lz4
+      - brotli
+      - glog
+      - boost-cpp=1.72.0
+      - orc=1.6.5
+test:
+  imports:
+    - pyarrow
+about:
+    home: http://github.com/apache/arrow
+    license: Apache-2.0
+    summary: Python libraries for Apache Arrow
