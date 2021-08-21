@@ -5,7 +5,7 @@ package:
     name: pyarrow
     version: 0.15.1
 build:
-    number: '1'
+    number: '2'
     string: py37ppc64le_gpu
 requirements:
     build:
@@ -15,14 +15,14 @@ requirements:
     run: 
       - python
       - numpy
-      - six
       - libutf8proc
-      - libprotobuf=3.11.4
+      - libprotobuf=3.11
+      - libboost=1.73
       - bzip2
       - lz4
       - brotli
+      - six
       - glog
-      - boost-cpp=1.72.0
       - orc=1.6.5
 test:
   imports:
